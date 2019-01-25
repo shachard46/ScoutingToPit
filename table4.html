@@ -65,6 +65,12 @@
             width: 150px;
             font-size: 1.2em !important;
         }
+        .page{
+          width: 100px !important;
+          float: left;
+          margin-left: 190px;
+          margin-top: 5px;
+        }
     </style>
 </head>
 
@@ -219,6 +225,12 @@ var path = window.location.pathname;
     <tr>
       <td colspan='6'>
         <button class='button buttonNext' onclick='next()'>הבא</button>
+        <script type='text/javascript'>
+          var path = window.location.pathname;
+                    var tableName = path.substring(path.lastIndexOf('/') + 1);
+                    var count = tableName.match(/\d/);
+                    document.write('<div class="page">6 / ' + count + ' </div>');
+        </script>
         <button class='button buttonBack' onclick='back()'>הקודם</button>
       </td>
     </tr>
